@@ -1,7 +1,6 @@
 package org.example.books.mappers;
 
 import org.example.books.dto.BookResponse;
-import org.example.books.dto.ErrorResponse;
 import org.example.books.model.Book;
 import org.springframework.stereotype.Component;
 

@@ -23,11 +23,6 @@ public class BooksService {
     private final BooksRepository booksRepository;
     private final CategoriesRepository categoriesRepository;
 
-    @Cacheable("books")
-    public List<Book> findAll(){
-        return booksRepository.findAll();
-    }
-
     @Cacheable(cacheNames = AppCacheProperties.CacheNames.BOOK_BY_NAME_AND_AUTHOR, key = "#bookName + #authorName")
     public Book getBookByNameAndAuthor(String bookName, String authorName) {
         if(bookName != null && authorName != null){
